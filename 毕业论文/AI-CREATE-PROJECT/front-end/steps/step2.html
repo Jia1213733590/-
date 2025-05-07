@@ -1,0 +1,52 @@
+<div class="step-content">
+  <h2>Choose Website Pages</h2>
+  <p>Select the pages to include in your website:</p>
+  
+  <div class="page-options" id="page-options-container">
+      <!-- Page options will be dynamically loaded here based on template type -->
+      <div class="loading-indicator">
+          <div class="spinner"></div>
+          <p>Loading page options...</p>
+      </div>
+  </div>
+  
+  <script>
+      // Load page options based on selected template type
+      (function() {
+          const container = document.getElementById('page-options-container');
+          const templateType = stepManager.stepData.templateType;
+          
+          if (!templateType) {
+              container.innerHTML = '<p class="error-message">Please go back and select a website type first.</p>';
+              return;
+          }
+          
+          // Get recommended pages from design engine
+          const recommendedPages = designEngine.getRecommendedPages(templateType);
+          
+          if (recommendedPages.length === 0) {
+              container.innerHTML = '<p class="error-message">Failed to load page options. Please try again.</p>';
+              return;
+          }
+          
+          // Build page options HTML
+          let pagesHtml = '';
+          recommendedPages.forEach(page => {
+              const isDefault = page.default ? 'default' : '';
+              const isChecked = page.default ? 'checked' : '';
+              
+              pagesHtml += `
+                  <div class="page-option ${isDefault}">
+                      <input type="checkbox" id="page-${page.id}" value="${page.id}" ${isChecked}>
+                      <label for="page-${page.id}">${page.name}</label>
+                  </div>
+              `;
+          });
+          
+          container.innerHTML = pagesHtml;
+          
+          // Bind events to new checkboxes
+          stepManager.bindPageSelectionEvents();
+      })();
+  </script>
+</div>

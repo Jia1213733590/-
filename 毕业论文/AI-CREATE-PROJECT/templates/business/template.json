@@ -1,0 +1,40 @@
+{
+  "name": "Business Website",
+  "description": "Showcase your company, services and products",
+  "pages": {
+    "home": {
+      "name": "Home",
+      "default": true
+    },
+    "about": {
+      "name": "About Us",
+      "default": true
+    },
+    "services": {
+      "name": "Services",
+      "default": true
+    },
+    "contact": {
+      "name": "Contact",
+      "default": true
+    },
+    "team": {
+      "name": "Our Team",
+      "default": false
+    },
+    "testimonials": {
+      "name": "Testimonials",
+      "default": false
+    },
+    "portfolio": {
+      "name": "Portfolio",
+      "default": false
+    },
+    "pricing": {
+      "name": "Pricing",
+      "default": false
+    }
+  },
+  "features": ["contact_form", "map", "social_media", "gallery"],
+  "themes": ["professional", "creative", "minimal", "modern", "hitech"]
+}

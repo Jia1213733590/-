@@ -1,0 +1,383 @@
+<!-- templates/ecommerce/pages/cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - <!-- SITE_TITLE --></title>
+    <!-- CSS_LINKS -->
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-left">
+                    <span><i class="icon-phone"></i> Call Us: (123) 456-7890</span>
+                    <span><i class="icon-email"></i> Email: info@yourstore.com</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="account.html"><i class="icon-user"></i> My Account</a>
+                    <a href="cart.html" class="active"><i class="icon-cart"></i> Cart (3)</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1><!-- SITE_TITLE --></h1>
+                </div>
+                <!-- FEATURE: search -->
+                <!-- NAVIGATION -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> &gt; Shopping Cart
+                </div>
+            </div>
+        </section>
+
+        <section class="cart-content">
+            <div class="container">
+                <div class="cart-empty" style="display: none;">
+                    <div class="empty-cart-icon">
+                        <i class="icon-cart-empty"></i>
+                    </div>
+                    <h2>Your cart is empty</h2>
+                    <p>Looks like you haven't added any products to your cart yet.</p>
+                    <a href="products.html" class="btn primary-btn">Continue Shopping</a>
+                </div>
+
+                <div class="cart-items">
+                    <div class="cart-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="cart-item">
+                                    <td class="product-info">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/80x80?text=Product" alt="Product 1">
+                                        </div>
+                                        <div class="product-details">
+                                            <h3><a href="product-detail.html">Product Name 1</a></h3>
+                                            <div class="product-meta">
+                                                <span>Color: Black</span>
+                                                <span>Size: M</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="product-price">$99.00</td>
+                                    <td class="product-quantity">
+                                        <div class="quantity-selector">
+                                            <button class="decrease-btn">-</button>
+                                            <input type="number" value="1" min="1" max="99">
+                                            <button class="increase-btn">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="product-subtotal">$99.00</td>
+                                    <td class="product-remove">
+                                        <button class="remove-btn" title="Remove Item"><i class="icon-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr class="cart-item">
+                                    <td class="product-info">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/80x80?text=Product" alt="Product 2">
+                                        </div>
+                                        <div class="product-details">
+                                            <h3><a href="product-detail.html">Product Name 2</a></h3>
+                                            <div class="product-meta">
+                                                <span>Color: Blue</span>
+                                                <span>Size: L</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="product-price">$129.00</td>
+                                    <td class="product-quantity">
+                                        <div class="quantity-selector">
+                                            <button class="decrease-btn">-</button>
+                                            <input type="number" value="1" min="1" max="99">
+                                            <button class="increase-btn">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="product-subtotal">$129.00</td>
+                                    <td class="product-remove">
+                                        <button class="remove-btn" title="Remove Item"><i class="icon-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr class="cart-item">
+                                    <td class="product-info">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/80x80?text=Product" alt="Product 3">
+                                        </div>
+                                        <div class="product-details">
+                                            <h3><a href="product-detail.html">Product Name 3</a></h3>
+                                            <div class="product-meta">
+                                                <span>Color: Red</span>
+                                                <span>Size: S</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="product-price">$79.00</td>
+                                    <td class="product-quantity">
+                                        <div class="quantity-selector">
+                                            <button class="decrease-btn">-</button>
+                                            <input type="number" value="2" min="1" max="99">
+                                            <button class="increase-btn">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="product-subtotal">$158.00</td>
+                                    <td class="product-remove">
+                                        <button class="remove-btn" title="Remove Item"><i class="icon-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="cart-actions">
+                        <div class="coupon">
+                            <input type="text" placeholder="Coupon Code">
+                            <button class="btn secondary-btn">Apply Coupon</button>
+                        </div>
+                        <div class="update-cart">
+                            <button class="btn secondary-btn">Update Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <h3>Cart Totals</h3>
+                    <div class="summary-table">
+                        <div class="summary-row">
+                            <div class="summary-label">Subtotal</div>
+                            <div class="summary-value">$386.00</div>
+                        </div>
+                        <div class="summary-row">
+                            <div class="summary-label">Shipping</div>
+                            <div class="summary-value">
+                                <div class="shipping-options">
+                                    <div class="shipping-option">
+                                        <input type="radio" id="free-shipping" name="shipping" checked>
+                                        <label for="free-shipping">Free Shipping</label>
+                                    </div>
+                                    <div class="shipping-option">
+                                        <input type="radio" id="flat-rate" name="shipping">
+                                        <label for="flat-rate">Flat Rate: $10.00</label>
+                                    </div>
+                                    <div class="shipping-option">
+                                        <input type="radio" id="local-pickup" name="shipping">
+                                        <label for="local-pickup">Local Pickup</label>
+                                    </div>
+                                </div>
+                                <p class="shipping-note">Shipping options will be updated during checkout.</p>
+                            </div>
+                        </div>
+                        <div class="summary-row">
+                            <div class="summary-label">Tax</div>
+                            <div class="summary-value">$38.60</div>
+                        </div>
+                        <div class="summary-row total">
+                            <div class="summary-label">Total</div>
+                            <div class="summary-value">$424.60</div>
+                        </div>
+                    </div>
+                    <div class="checkout-button">
+                        <a href="checkout.html" class="btn primary-btn">Proceed to Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="continue-shopping">
+            <div class="container">
+                <a href="products.html" class="btn secondary-btn"><i class="icon-arrow-left"></i> Continue Shopping</a>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="container">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Product" alt="Product">
+                            <div class="product-actions">
+                                <button class="add-to-cart-btn" title="Add to Cart"><i class="icon-cart"></i></button>
+                                <button class="add-to-wishlist-btn" title="Add to Wishlist"><i class="icon-heart"></i></button>
+                                <button class="quick-view-btn" title="Quick View"><i class="icon-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="product-detail.html">Recommended Product 1</a></h3>
+                            <div class="product-price">$89.00</div>
+                            <div class="product-rating">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star-empty"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge sale">Sale</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Product" alt="Product">
+                            <div class="product-actions">
+                                <button class="add-to-cart-btn" title="Add to Cart"><i class="icon-cart"></i></button>
+                                <button class="add-to-wishlist-btn" title="Add to Wishlist"><i class="icon-heart"></i></button>
+                                <button class="quick-view-btn" title="Quick View"><i class="icon-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="product-detail.html">Recommended Product 2</a></h3>
+                            <div class="product-price">
+                                <span class="old-price">$119.00</span>
+                                <span class="current-price">$95.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Product" alt="Product">
+                            <div class="product-actions">
+                                <button class="add-to-cart-btn" title="Add to Cart"><i class="icon-cart"></i></button>
+                                <button class="add-to-wishlist-btn" title="Add to Wishlist"><i class="icon-heart"></i></button>
+                                <button class="quick-view-btn" title="Quick View"><i class="icon-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="product-detail.html">Recommended Product 3</a></h3>
+                            <div class="product-price">$79.00</div>
+                            <div class="product-rating">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star-half"></i>
+                                <i class="icon-star-empty"></i>
+                                <span>(3.5)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Product" alt="Product">
+                            <div class="product-actions">
+                                <button class="add-to-cart-btn" title="Add to Cart"><i class="icon-cart"></i></button>
+                                <button class="add-to-wishlist-btn" title="Add to Wishlist"><i class="icon-heart"></i></button>
+                                <button class="quick-view-btn" title="Quick View"><i class="icon-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="product-detail.html">Recommended Product 4</a></h3>
+                            <div class="product-price">$109.00</div>
+                            <div class="product-rating">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star-empty"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <h2><!-- SITE_TITLE --></h2>
+                        </div>
+                        <p>Your one-stop shop for quality products at competitive prices. We've been serving customers since 2010.</p>
+                        <div class="footer-contact">
+                            <p><i class="icon-location"></i> 123 Store Street, City, Country</p>
+                            <p><i class="icon-phone"></i> (123) 456-7890</p>
+                            <p><i class="icon-email"></i> info@yourstore.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Categories</h3>
+                        <ul class="footer-links">
+                            <li><a href="products.html">Category 1</a></li>
+                            <li><a href="products.html">Category 2</a></li>
+                            <li><a href="products.html">Category 3</a></li>
+                            <li><a href="products.html">Category 4</a></li>
+                            <li><a href="products.html">View All</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Customer Service</h3>
+                        <ul class="footer-links">
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our newsletter to receive updates on new products and special offers.</p>
+                        <!-- FEATURE: newsletter -->
+                        <div class="newsletter-fallback">
+                            <form class="newsletter-form">
+                                <div class="form-group">
+                                    <input type="email" placeholder="Your Email Address" required>
+                                    <button type="submit" class="btn primary-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2025 <!-- SITE_TITLE -->. All rights reserved.</p>
+                </div>
+                <div class="payment-methods">
+                    <span>We Accept:</span>
+                    <img src="https://via.placeholder.com/300x30?text=Payment+Methods" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS_LINKS -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+<div class="step-content">
+  <h2>Choose Color Theme</h2>
+  <p>Select a color theme for your website:</p>
+  
+  <div class="color-options" id="color-options-container">
+      <!-- Color options will be dynamically loaded here based on template type -->
+      <div class="loading-indicator">
+          <div class="spinner"></div>
+          <p>Loading color themes...</p>
+      </div>
+  </div>
+  
+  <script>
+      // Load color options based on selected template type
+      (function() {
+          const container = document.getElementById('color-options-container');
+          const templateType = stepManager.stepData.templateType;
+          
+          if (!templateType) {
+              container.innerHTML = '<p class="error-message">Please go back and select a website type first.</p>';
+              return;
+          }
+          
+          // Get available themes from design engine
+          const availableThemes = designEngine.getAvailableThemes(templateType);
+          
+          if (availableThemes.length === 0) {
+              container.innerHTML = '<p class="error-message">Failed to load color themes. Please try again.</p>';
+              return;
+          }
+          
+          // Define color samples for each theme
+          const themeColors = {
+              professional: ['#1A365D', '#F5F7FA', '#4A4A4A'],
+              creative: ['#7B68EE', '#E6F2FF', '#FF6B6B'],
+              minimal: ['#FFFFFF', '#F5F5F5', '#000000'],
+              artistic: ['#6D597A', '#EAEFF2', '#B56576'],
+              modern: ['#2D3142', '#FFFFFF', '#EF8354'],
+              hitech: ['#121212', '#1E1E1E', '#00FFFF'],
+              reader: ['#F8F9FA', '#FFFFFF', '#343A40']
+          };
+          
+          // Build color options HTML
+          let colorsHtml = '';
+          availableThemes.forEach(theme => {
+              const colors = themeColors[theme] || ['#CCC', '#DDD', '#EEE'];
+              
+              colorsHtml += `
+                  <div class="color-option" data-theme="${theme}">
+                      <div class="color-preview">
+                          <span class="color-sample" style="background-color: ${colors[0]};"></span>
+                          <span class="color-sample" style="background-color: ${colors[1]};"></span>
+                          <span class="color-sample" style="background-color: ${colors[2]};"></span>
+                      </div>
+                      <h4>${theme.charAt(0).toUpperCase() + theme.slice(1)}</h4>
+                  </div>
+              `;
+          });
+          
+          container.innerHTML = colorsHtml;
+          
+          // Bind events to new color options
+          stepManager.bindColorSelectionEvents();
+      })();
+  </script>
+</div>

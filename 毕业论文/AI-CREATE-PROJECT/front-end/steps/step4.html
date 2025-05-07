@@ -1,0 +1,108 @@
+<div class="step-content">
+  <h2>Choose Website Features</h2>
+  <p>Select the features you want to include in your website:</p>
+  
+  <div class="feature-options" id="feature-options-container">
+      <!-- Feature options will be dynamically loaded here based on template type -->
+      <div class="loading-indicator">
+          <div class="spinner"></div>
+          <p>Loading feature options...</p>
+      </div>
+  </div>
+  
+  <script>
+      // Load feature options based on selected template type
+      (function() {
+          const container = document.getElementById('feature-options-container');
+          const templateType = stepManager.stepData.templateType;
+          
+          if (!templateType) {
+              container.innerHTML = '<p class="error-message">Please go back and select a website type first.</p>';
+              return;
+          }
+          
+          // Get recommended features from design engine
+          const recommendedFeatures = designEngine.getRecommendedFeatures(templateType);
+          
+          // Define all available features
+          const allFeatures = {
+              contact_form: {
+                  name: "Contact Form",
+                  description: "Allow visitors to send you messages directly"
+              },
+              gallery: {
+                  name: "Image Gallery",
+                  description: "Display multiple images in a grid or slideshow"
+              },
+              map: {
+                  name: "Location Map",
+                  description: "Show your physical location on a map"
+              },
+              social_media: {
+                  name: "Social Media Links",
+                  description: "Link to your social media profiles"
+              },
+              blog_section: {
+                  name: "Blog Section",
+                  description: "Share articles and updates with visitors"
+              },
+              newsletter: {
+                  name: "Newsletter Signup",
+                  description: "Collect email addresses for newsletters"
+              },
+              search: {
+                  name: "Search Functionality",
+                  description: "Allow visitors to search your website"
+              },
+              user_accounts: {
+                  name: "User Accounts",
+                  description: "Let visitors create accounts and login"
+              },
+              product_showcase: {
+                  name: "Product Showcase",
+                  description: "Display products with details and images"
+              }
+          };
+          
+          // Build feature options HTML
+          let featuresHtml = '';
+          
+          // First add recommended features
+          recommendedFeatures.forEach(featureId => {
+              if (allFeatures[featureId]) {
+                  const feature = allFeatures[featureId];
+                  featuresHtml += `
+                      <div class="feature-option">
+                          <input type="checkbox" id="feature-${featureId}" value="${featureId}">
+                          <div class="feature-option-content">
+                              <label for="feature-${featureId}">${feature.name}</label>
+                              <p>${feature.description}</p>
+                          </div>
+                      </div>
+                  `;
+                  
+                  // Remove from allFeatures to avoid duplication
+                  delete allFeatures[featureId];
+              }
+          });
+          
+          // Then add other features that might be useful
+          for (const [featureId, feature] of Object.entries(allFeatures)) {
+              featuresHtml += `
+                  <div class="feature-option">
+                      <input type="checkbox" id="feature-${featureId}" value="${featureId}">
+                      <div class="feature-option-content">
+                          <label for="feature-${featureId}">${feature.name}</label>
+                          <p>${feature.description}</p>
+                      </div>
+                  </div>
+              `;
+          }
+          
+          container.innerHTML = featuresHtml;
+          
+          // Bind events to new checkboxes
+          stepManager.bindFeatureSelectionEvents();
+      })();
+  </script>
+</div>

@@ -1,0 +1,243 @@
+/* Creative Theme for Blog Template */
+
+:root {
+  --primary-color: #7B68EE;
+  --secondary-color: #6A5ACD;
+  --accent-color: #FF6B6B;
+  --text-color: #333333;
+  --light-text: #777777;
+  --background-color: #FFFFFF;
+  --light-background: #E6F2FF;
+  --border-color: #DDDDDD;
+  --success-color: #4CAF50;
+  --error-color: #F44336;
+  --header-font: 'Poppins', sans-serif;
+  --body-font: 'Nunito', sans-serif;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Header */
+header {
+  background-color: var(--background-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+nav a {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(123, 104, 238, 0.3);
+}
+
+.btn {
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 12px 30px;
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+}
+
+.btn:hover {
+  background-color: #FF5252;
+  transform: translateY(-2px);
+}
+
+/* Post Cards */
+.post-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h3 {
+  font-weight: 700;
+}
+
+.post-meta {
+  color: var(--light-text);
+}
+
+.read-more {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.read-more:hover {
+  color: #FF5252;
+}
+
+/* Categories */
+.category-item {
+  background-color: var(--light-background);
+  color: var(--primary-color);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.category-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(123, 104, 238, 0.3);
+}
+
+/* Sidebar */
+.sidebar-widget {
+  background-color: var(--light-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.sidebar-widget h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.tag {
+  background-color: rgba(123, 104, 238, 0.1);
+  color: var(--primary-color);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.tag:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Pagination */
+.pagination-item {
+  background-color: var(--light-background);
+  color: var(--primary-color);
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+}
+
+.pagination-item.next {
+  border-radius: 30px;
+}
+
+.pagination-item:hover, .pagination-item.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Blog Post */
+blockquote {
+  border-color: var(--accent-color);
+  background-color: rgba(123, 104, 238, 0.05);
+  border-radius: 8px;
+  font-size: 1.1em;
+}
+
+.post-tags {
+  color: var(--light-text);
+}
+
+.post-author-bio {
+  background-color: var(--light-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+/* Comments */
+.commenter-name {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.comment-date {
+  color: var(--light-text);
+}
+
+button[type="submit"] {
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+}
+
+button[type="submit"]:hover {
+  background-color: #FF5252;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+  margin-top: 60px;
+}
+
+footer h3 {
+  color: white;
+  font-weight: 700;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+.copyright {
+  border-color: rgba(255, 255, 255, 0.1);
+}

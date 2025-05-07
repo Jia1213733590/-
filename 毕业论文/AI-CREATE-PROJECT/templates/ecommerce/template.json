@@ -1,0 +1,49 @@
+
+{
+  "name": "Online Store",
+  "description": "Sell products with shopping features",
+  "pages": {
+    "home": {
+      "name": "Home",
+      "default": true
+    },
+    "about": {
+      "name": "About Us",
+      "default": true
+    },
+    "products": {
+      "name": "All Products",
+      "default": true
+    },
+    "product-detail": {
+      "name": "Product Detail",
+      "default": true
+    },
+    "cart": {
+      "name": "Shopping Cart",
+      "default": true
+    },
+    "checkout": {
+      "name": "Checkout",
+      "default": false
+    },
+    "contact": {
+      "name": "Contact",
+      "default": true
+    },
+    "faq": {
+      "name": "FAQ",
+      "default": false
+    },
+    "terms": {
+      "name": "Terms & Conditions",
+      "default": false
+    },
+    "privacy": {
+      "name": "Privacy Policy",
+      "default": false
+    }
+  },
+  "features": ["product_showcase", "shopping_cart", "contact_form", "social_media", "newsletter", "search"],
+  "themes": ["professional", "creative", "minimal", "modern", "elegant"]
+}

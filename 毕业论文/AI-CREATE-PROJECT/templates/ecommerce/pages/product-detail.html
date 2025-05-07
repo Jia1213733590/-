@@ -1,0 +1,537 @@
+<!-- templates/ecommerce/pages/product-detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - <!-- SITE_TITLE --></title>
+    <!-- CSS_LINKS -->
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-left">
+                    <span><i class="icon-phone"></i> Call Us: (123) 456-7890</span>
+                    <span><i class="icon-email"></i> Email: info@yourstore.com</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="account.html"><i class="icon-user"></i> My Account</a>
+                    <a href="cart.html"><i class="icon-cart"></i> Cart (0)</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1><!-- SITE_TITLE --></h1>
+                </div>
+                <!-- FEATURE: search -->
+                <!-- NAVIGATION -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> &gt; 
+                    <a href="products.html">Products</a> &gt; 
+                    <span>Product Name</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-detail">
+            <div class="container">
+                <div class="product-layout">
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img src="https://via.placeholder.com/600x600?text=Product" alt="Product Name">
+                        </div>
+                        <div class="thumbnail-images">
+                            <div class="thumbnail active">
+                                <img src="https://via.placeholder.com/100x100?text=Thumb1" alt="Thumbnail 1">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/100x100?text=Thumb2" alt="Thumbnail 2">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/100x100?text=Thumb3" alt="Thumbnail 3">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/100x100?text=Thumb4" alt="Thumbnail 4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-title">Product Name</h1>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star-half"></i>
+                            </div>
+                            <span class="rating-count">4.5 (120 Reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$99.00</span>
+                            <span class="old-price">$129.00</span>
+                            <span class="discount">-23%</span>
+                        </div>
+                        <div class="product-short-description">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo, nisi nec fringilla ultricies, nunc eros facilisis odio, in scelerisque ipsum dolor nec nisi.</p>
+                        </div>
+                        <div class="product-variants">
+                            <div class="variant-group">
+                                <label>Color:</label>
+                                <div class="variant-options">
+                                    <div class="color-option active" style="background-color: #000;" data-color="Black"></div>
+                                    <div class="color-option" style="background-color: #0000FF;" data-color="Blue"></div>
+                                    <div class="color-option" style="background-color: #FF0000;" data-color="Red"></div>
+                                    <div class="color-option" style="background-color: #008000;" data-color="Green"></div>
+                                </div>
+                            </div>
+                            <div class="variant-group">
+                                <label>Size:</label>
+                                <div class="variant-options">
+                                    <div class="size-option">S</div>
+                                    <div class="size-option active">M</div>
+                                    <div class="size-option">L</div>
+                                    <div class="size-option">XL</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-quantity">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="decrease-btn">-</button>
+                                <input type="number" value="1" min="1" max="99">
+                                <button class="increase-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn primary-btn add-to-cart-btn"><i class="icon-cart"></i> Add to Cart</button>
+                            <button class="btn wishlist-btn"><i class="icon-heart"></i></button>
+                        </div>
+                        <div class="product-meta">
+                            <div class="meta-item">
+                                <span>SKU:</span> PRD-123456
+                            </div>
+                            <div class="meta-item">
+                                <span>Category:</span> <a href="products.html">Category Name</a>
+                            </div>
+                            <div class="meta-item">
+                                <span>Tags:</span> 
+                                <a href="#">Tag 1</a>, 
+                                <a href="#">Tag 2</a>, 
+                                <a href="#">Tag 3</a>
+                            </div>
+                        </div>
+                        <div class="product-share">
+                            <span>Share:</span>
+                            <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="icon-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-tabs">
+                    <div class="tabs-nav">
+                        <button class="tab-btn active" data-tab="description">Description</button>
+                        <button class="tab-btn" data-tab="specifications">Specifications</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews (120)</button>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="tab-panel active" id="description">
+                            <h3>Product Description</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo, nisi nec fringilla ultricies, nunc eros facilisis odio, in scelerisque ipsum dolor nec nisi. Proin auctor, mauris nec semper ultricies, libero sapien viverra eros, nec rhoncus urna magna a ex. Fusce vel interdum erat, id efficitur enim.</p>
+                            <p>Vivamus hendrerit enim nec diam tincidunt, sit amet elementum justo dapibus. Phasellus eget est nec enim egestas varius. Integer vitae turpis ligula. Nulla facilisi. Sed euismod consequat dolor, vel egestas neque placerat ut.</p>
+                            <ul>
+                                <li>Feature 1 of the product</li>
+                                <li>Feature 2 of the product</li>
+                                <li>Feature 3 of the product</li>
+                                <li>Feature 4 of the product</li>
+                                <li>Feature 5 of the product</li>
+                            </ul>
+                        </div>
+                        <div class="tab-panel" id="specifications">
+                            <h3>Product Specifications</h3>
+                            <table class="specs-table">
+                                <tr>
+                                    <th>Material</th>
+                                    <td>Premium Quality</td>
+                                </tr>
+                                <tr>
+                                    <th>Weight</th>
+                                    <td>0.5 kg</td>
+                                </tr>
+                                <tr>
+                                    <th>Dimensions</th>
+                                    <td>25 x 15 x 5 cm</td>
+                                </tr>
+                                <tr>
+                                    <th>Color Options</th>
+                                    <td>Black, Blue, Red, Green</td>
+                                </tr>
+                                <tr>
+                                    <th>Size Options</th>
+                                    <td>S, M, L, XL</td>
+                                </tr>
+                                <tr>
+                                    <th>Warranty</th>
+                                    <td>1 Year</td>
+                                </tr>
+                                <tr>
+                                    <th>Made In</th>
+                                    <td>USA</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-panel" id="reviews">
+                            <h3>Customer Reviews</h3>
+                            <div class="reviews-summary">
+                                <div class="average-rating">
+                                    <div class="rating-number">4.5</div>
+                                    <div class="rating-stars">
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star-half"></i>
+                                    </div>
+                                    <div class="rating-count">Based on 120 reviews</div>
+                                </div>
+                                <div class="rating-bars">
+                                    <div class="rating-bar">
+                                        <div class="rating-label">5 Stars</div>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 70%"></div>
+                                        </div>
+                                        <div class="rating-percent">70%</div>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="rating-label">4 Stars</div>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 20%"></div>
+                                        </div>
+                                        <div class="rating-percent">20%</div>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="rating-label">3 Stars</div>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 5%"></div>
+                                        </div>
+                                        <div class="rating-percent">5%</div>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="rating-label">2 Stars</div>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 3%"></div>
+                                        </div>
+                                        <div class="rating-percent">3%</div>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="rating-label">1 Star</div>
+                                        <div class="bar-container">
+                                            <div class="bar" style="width: 2%"></div>
+                                        </div>
+                                        <div class="rating-percent">2%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="reviews-list">
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <img src="https://via.placeholder.com/50x50?text=User" alt="Reviewer">
+                                            <div>
+                                                <h4>John Doe</h4>
+                                                <div class="review-date">August 15, 2024</div>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        <h5>Excellent product!</h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor magna eget risus sagittis, at lobortis quam lacinia. Mauris pharetra nibh ut dui tincidunt, vel faucibus nisi facilisis.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <img src="https://via.placeholder.com/50x50?text=User" alt="Reviewer">
+                                            <div>
+                                                <h4>Jane Smith</h4>
+                                                <div class="review-date">August 10, 2024</div>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-empty"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        <h5>Great value for money</h5>
+                                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="reviewer-info">
+                                            <img src="https://via.placeholder.com/50x50?text=User" alt="Reviewer">
+                                            <div>
+                                                <h4>Michael Johnson</h4>
+                                                <div class="review-date">August 5, 2024</div>
+                                            </div>
+                                        </div>
+                                        <div class="review-rating">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star-half"></i>
+                                            <i class="icon-star-empty"></i>
+                                        </div>
+                                    </div>
+                                    <div class="review-content">
+                                        <h5>Good but could be better</h5>
+                                        <p>Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In ac dui quis mi consectetuer lacinia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="pagination">
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">&raquo;</a>
+                            </div>
+                            
+                            <div class="write-review">
+                                <h3>Write a Review</h3>
+                                <form class="review-form">
+                                    <div class="form-group">
+                                        <label>Your Rating</label>
+                                        <div class="rating-select">
+                                            <i class="icon-star-empty" data-rating="1"></i>
+                                            <i class="icon-star-empty" data-rating="2"></i>
+                                            <i class="icon-star-empty" data-rating="3"></i>
+                                            <i class="icon-star-empty" data-rating="4"></i>
+                                            <i class="icon-star-empty" data-rating="5"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="review-title">Review Title</label>
+                                        <input type="text" id="review-title" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="review-content">Your Review</label>
+                                        <textarea id="review-content" rows="5" required></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reviewer-name">Your Name</label>
+                                        <input type="text" id="reviewer-name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reviewer-email">Your Email</label>
+                                        <input type="email" id="reviewer-email" required>
+                                    </div>
+                                    <button type="submit" class="btn primary-btn">Submit Review</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="container">
+                <h2 class="section-title">Related Products</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Related+1" alt="Related Product 1">
+                            <div class="product-actions">
+                                <button class="add-to-cart-btn" title="Add to Cart"><i class="icon-cart"></i></button>
+                                <button class="add-to-wishlist-btn" title="Add to Wishlist"><i class="icon-heart"></i></button>
+                                <button class="quick-view-btn" title="Quick View"><i class="icon-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="product-detail.html">Related Product 1</a></h3>
+                            <div class="product-price">$89.00</div>
+                            <div class="product-rating">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star-empty"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge sale">Sale</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Related+2" alt="Related Product 2">
+                            <div class="product-actions">
+                                <button class="add-to-cart-btn" title="Add to Cart"><i class="icon-cart"></i></button>
+                                <button class="add-to-wishlist-btn" title="Add to Wishlist"><i class="icon-heart"></i></button>
+                                <button class="quick-view-btn" title="Quick View"><i class="icon-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="product-detail.html">Related Product 2</a></h3>
+                            <div class="product-price">
+                                <span class="old-price">$119.00</span>
+                                <span class="current-price">$95.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Related+3" alt="Related Product 3">
+                            <div class="product-actions">
+                                <button class="add-to-cart-btn" title="Add to Cart"><i class="icon-cart"></i></button>
+                                <button class="add-to-wishlist-btn" title="Add to Wishlist"><i class="icon-heart"></i></button>
+                                <button class="quick-view-btn" title="Quick View"><i class="icon-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="product-detail.html">Related Product 3</a></h3>
+                            <div class="product-price">$79.00</div>
+                            <div class="product-rating">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star-half"></i>
+                                <i class="icon-star-empty"></i>
+                                <span>(3.5)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-badge">New</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Related+4" alt="Related Product 4">
+                            <div class="product-actions">
+                                <button class="add-to-cart-btn" title="Add to Cart"><i class="icon-cart"></i></button>
+                                <button class="add-to-wishlist-btn" title="Add to Wishlist"><i class="icon-heart"></i></button>
+                                <button class="quick-view-btn" title="Quick View"><i class="icon-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="product-detail.html">Related Product 4</a></h3>
+                            <div class="product-price">$109.00</div>
+                            <div class="product-rating">
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-star-empty"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <h2><!-- SITE_TITLE --></h2>
+                        </div>
+                        <p>Your one-stop shop for quality products at competitive prices. We've been serving customers since 2010.</p>
+                        <div class="footer-contact">
+                            <p><i class="icon-location"></i> 123 Store Street, City, Country</p>
+                            <p><i class="icon-phone"></i> (123) 456-7890</p>
+                            <p><i class="icon-email"></i> info@yourstore.com</p>
+                        </div>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Categories</h3>
+                        <ul class="footer-links">
+                            <li><a href="products.html">Category 1</a></li>
+                            <li><a href="products.html">Category 2</a></li>
+                            <li><a href="products.html">Category 3</a></li>
+                            <li><a href="products.html">Category 4</a></li>
+                            <li><a href="products.html">View All</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Customer Service</h3>
+                        <ul class="footer-links">
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="terms.html">Terms & Conditions</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our newsletter to receive updates on new products and special offers.</p>
+                        <!-- FEATURE: newsletter -->
+                        <div class="newsletter-fallback">
+                            <form class="newsletter-form">
+                                <div class="form-group">
+                                    <input type="email" placeholder="Your Email Address" required>
+                                    <button type="submit" class="btn primary-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <p>&copy; 2025 <!-- SITE_TITLE -->. All rights reserved.</p>
+                </div>
+                <div class="payment-methods">
+                    <span>We Accept:</span>
+                    <img src="https://via.placeholder.com/300x30?text=Payment+Methods" alt="Payment Methods">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS_LINKS -->
+</body>
+</html>

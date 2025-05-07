@@ -1,0 +1,32 @@
+{
+  "name": "Blog/Content Website",
+  "description": "Share articles and content with your audience",
+  "pages": {
+    "home": {
+      "name": "Home",
+      "default": true
+    },
+    "about": {
+      "name": "About",
+      "default": true
+    },
+    "post-list": {
+      "name": "Blog",
+      "default": true
+    },
+    "post-detail": {
+      "name": "Article",
+      "default": true
+    },
+    "category": {
+      "name": "Categories",
+      "default": false
+    },
+    "contact": {
+      "name": "Contact",
+      "default": false
+    }
+  },
+  "features": ["blog_section", "search", "social_media", "newsletter"],
+  "themes": ["professional", "creative", "minimal", "reader", "modern"]
+}

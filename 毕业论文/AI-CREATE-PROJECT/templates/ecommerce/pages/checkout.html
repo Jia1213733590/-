@@ -1,0 +1,367 @@
+<!-- templates/ecommerce/pages/checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - <!-- SITE_TITLE --></title>
+    <!-- CSS_LINKS -->
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-left">
+                    <span><i class="icon-phone"></i> Call Us: (123) 456-7890</span>
+                    <span><i class="icon-email"></i> Email: info@yourstore.com</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="account.html"><i class="icon-user"></i> My Account</a>
+                    <a href="cart.html"><i class="icon-cart"></i> Cart (3)</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1><!-- SITE_TITLE --></h1>
+                </div>
+                <!-- FEATURE: search -->
+                <!-- NAVIGATION -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Checkout</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> &gt; 
+                    <a href="cart.html">Cart</a> &gt; 
+                    Checkout
+                </div>
+            </div>
+        </section>
+
+        <section class="checkout-content">
+            <div class="container">
+                <div class="checkout-notice">
+                    <p>Returning customer? <a href="#" class="toggle-login">Click here to login</a></p>
+                    <p>Have a coupon? <a href="#" class="toggle-coupon">Click here to enter your code</a></p>
+                </div>
+
+                <div class="coupon-form" style="display: none;">
+                    <p>If you have a coupon code, please apply it below.</p>
+                    <div class="form-row">
+                        <input type="text" placeholder="Coupon code">
+                        <button class="btn secondary-btn">Apply Coupon</button>
+                    </div>
+                </div>
+
+                <div class="login-form" style="display: none;">
+                    <p>If you have shopped with us before, please enter your details below. If you are a new customer, please proceed to the Billing section.</p>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="username">Username or email</label>
+                            <input type="text" id="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn secondary-btn">Login</button>
+                            <div class="remember-me">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">Remember me</label>
+                            </div>
+                        </div>
+                        <a href="#" class="lost-password">Lost your password?</a>
+                    </div>
+                </div>
+
+                <form class="checkout-form">
+                    <div class="checkout-columns">
+                        <div class="billing-details">
+                            <h3>Billing Details</h3>
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="first-name">First Name *</label>
+                                    <input type="text" id="first-name" required>
+                                </div>
+                                <div class="form-group half">
+                                    <label for="last-name">Last Name *</label>
+                                    <input type="text" id="last-name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company-name">Company Name (Optional)</label>
+                                <input type="text" id="company-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country / Region *</label>
+                                <select id="country" required>
+                                    <option value="">Select a country / region</option>
+                                    <option value="US">United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="GB">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <!-- More countries -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="street-address">Street Address *</label>
+                                <input type="text" id="street-address" placeholder="House number and street name" required>
+                                <input type="text" placeholder="Apartment, suite, unit, etc. (optional)">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Town / City *</label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State / Province *</label>
+                                <select id="state" required>
+                                    <option value="">Select a state</option>
+                                    <!-- States will be dynamically populated based on country -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="postcode">Postcode / ZIP *</label>
+                                <input type="text" id="postcode" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="create-account">
+                                    <input type="checkbox" id="create-account">
+                                    <label for="create-account">Create an account?</label>
+                                </div>
+                            </div>
+
+                            <div class="account-fields" style="display: none;">
+                                <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                                <div class="form-group">
+                                    <label for="account-password">Account password *</label>
+                                    <input type="password" id="account-password">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="shipping-checkbox">
+                                    <input type="checkbox" id="ship-different-address">
+                                    <label for="ship-different-address">Ship to a different address?</label>
+                                </div>
+                            </div>
+
+                            <div class="shipping-fields" style="display: none;">
+                                <!-- Shipping address fields, similar to billing fields -->
+                                <div class="form-row">
+                                    <div class="form-group half">
+                                        <label for="shipping-first-name">First Name *</label>
+                                        <input type="text" id="shipping-first-name">
+                                    </div>
+                                    <div class="form-group half">
+                                        <label for="shipping-last-name">Last Name *</label>
+                                        <input type="text" id="shipping-last-name">
+                                    </div>
+                                </div>
+                                <!-- More shipping fields -->
+                            </div>
+
+                            <div class="form-group">
+                                <label for="order-notes">Order Notes (Optional)</label>
+                                <textarea id="order-notes" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="order-summary">
+                            <h3>Your Order</h3>
+                            <div class="order-review">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Product Name 1 × 1</td>
+                                            <td>$99.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product Name 2 × 1</td>
+                                            <td>$129.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product Name 3 × 2</td>
+                                            <td>$158.00</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Subtotal</th>
+                                            <td>$386.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Shipping</th>
+                                            <td>Free shipping</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Tax</th>
+                                            <td>$38.60</td>
+                                        </tr>
+                                        <tr class="order-total">
+                                            <th>Total</th>
+                                            <td>$424.60</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" id="payment-bank" name="payment-method" checked>
+                                    <label for="payment-bank">Direct Bank Transfer</label>
+                                    <div class="payment-box">
+                                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="payment-check" name="payment-method">
+                                    <label for="payment-check">Check Payments</label>
+                                    <div class="payment-box" style="display: none;">
+                                        <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="payment-cash" name="payment-method">
+                                    <label for="payment-cash">Cash on Delivery</label>
+                                    <div class="payment-box" style="display: none;">
+                                        <p>Pay with cash upon delivery.</p>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="payment-paypal" name="payment-method">
+                                    <label for="payment-paypal">PayPal</label>
+                                    <div class="payment-box" style="display: none;">
+                                        <p>Pay via PayPal; you can pay with your credit card if you don't have a PayPal account.</p>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="payment-card" name="payment-method">
+                                    <label for="payment-card">Credit Card (Stripe)</label>
+                                    <div class="payment-box" style="display: none;">
+                                        <div class="credit-card-form">
+                                            <!-- Credit card fields -->
+                                            <div class="form-group">
+                                                <label for="card-number">Card Number *</label>
+                                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group half">
+                                                    <label for="expiry-date">Expiry Date *</label>
+                                                    <input type="text" id="expiry-date" placeholder="MM/YY">
+                                                </div>
+                                                <div class="form-group half">
+                                                    <label for="card-cvc">Card Code (CVC) *</label>
+                                                    <input type="text" id="card-cvc" placeholder="CVC">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkout-agreement">
+                              <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+                              <div class="form-group">
+                                  <input type="checkbox" id="terms-agreement" required>
+                                  <label for="terms-agreement">I have read and agree to the website <a href="terms.html">terms and conditions</a> *</label>
+                              </div>
+                          </div>
+
+                          <button type="submit" class="btn primary-btn place-order-btn">Place Order</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </section>
+  </main>
+
+  <footer>
+      <div class="footer-top">
+          <div class="container">
+              <div class="footer-widgets">
+                  <div class="footer-widget">
+                      <div class="footer-logo">
+                          <h2><!-- SITE_TITLE --></h2>
+                      </div>
+                      <p>Your one-stop shop for quality products at competitive prices. We've been serving customers since 2010.</p>
+                      <div class="footer-contact">
+                          <p><i class="icon-location"></i> 123 Store Street, City, Country</p>
+                          <p><i class="icon-phone"></i> (123) 456-7890</p>
+                          <p><i class="icon-email"></i> info@yourstore.com</p>
+                      </div>
+                  </div>
+                  <div class="footer-widget">
+                      <h3>Categories</h3>
+                      <ul class="footer-links">
+                          <li><a href="products.html">Category 1</a></li>
+                          <li><a href="products.html">Category 2</a></li>
+                          <li><a href="products.html">Category 3</a></li>
+                          <li><a href="products.html">Category 4</a></li>
+                          <li><a href="products.html">View All</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-widget">
+                      <h3>Customer Service</h3>
+                      <ul class="footer-links">
+                          <li><a href="contact.html">Contact Us</a></li>
+                          <li><a href="faq.html">FAQs</a></li>
+                          <li><a href="#">Shipping & Delivery</a></li>
+                          <li><a href="#">Returns & Exchanges</a></li>
+                          <li><a href="terms.html">Terms & Conditions</a></li>
+                          <li><a href="privacy.html">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-widget">
+                      <h3>Newsletter</h3>
+                      <p>Subscribe to our newsletter to receive updates on new products and special offers.</p>
+                      <!-- FEATURE: newsletter -->
+                      <div class="newsletter-fallback">
+                          <form class="newsletter-form">
+                              <div class="form-group">
+                                  <input type="email" placeholder="Your Email Address" required>
+                                  <button type="submit" class="btn primary-btn">Subscribe</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="container">
+              <div class="copyright">
+                  <p>&copy; 2025 <!-- SITE_TITLE -->. All rights reserved.</p>
+              </div>
+              <div class="payment-methods">
+                  <span>We Accept:</span>
+                  <img src="https://via.placeholder.com/300x30?text=Payment+Methods" alt="Payment Methods">
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- JS_LINKS -->
+</body>
+</html>
